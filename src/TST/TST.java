@@ -254,44 +254,4 @@ public class TST<Value> {
     }
 
 
-    /**
-     * Unit tests the {@code TST} data type.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-
-        // build symbol table from standard input
-        TST<Integer> st = new TST<Integer>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
-
-        // print results
-        if (st.size() < 100) {
-            StdOut.println("keys(\"\"):");
-            for (String key : st.keys()) {
-                StdOut.println(key + " " + st.get(key));
-            }
-            StdOut.println();
-        }
-
-        StdOut.println("longestPrefixOf(\"shellsort\"):");
-        StdOut.println(st.longestPrefixOf("shellsort"));
-        StdOut.println();
-
-        StdOut.println("longestPrefixOf(\"shell\"):");
-        StdOut.println(st.longestPrefixOf("shell"));
-        StdOut.println();
-
-        StdOut.println("keysWithPrefix(\"shor\"):");
-        for (String s : st.keysWithPrefix("shor"))
-            StdOut.println(s);
-        StdOut.println();
-
-        StdOut.println("keysThatMatch(\".he.l.\"):");
-        for (String s : st.keysThatMatch(".he.l."))
-            StdOut.println(s);
-    }
 }
