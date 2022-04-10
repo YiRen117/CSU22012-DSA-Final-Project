@@ -22,8 +22,9 @@ public class Part1 {
                         Collections.reverse(pathSeq);
                         System.out.print("The sequence of stops is ");
                         for(String s : pathSeq){
-                            System.out.printf((s.equals(toID)) ? "%s.\n" : "%s, ", s);
+                            System.out.printf((s.equals(toID)) ? "%s, " : "%s -> ", s);
                         }
+                        System.out.printf("and the cost is %.2f.\n", paths.distTo[from][to]);
                     } else{
                         System.out.println("No stops found! Please enter a valid stop id.");
                     }

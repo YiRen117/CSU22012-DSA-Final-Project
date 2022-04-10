@@ -10,7 +10,7 @@ public class ShortestPath {
     private Map<String, String> names;
     public Map<String, Integer> indexes;
     private Map<Integer, String> stopID;
-    private double[][] distTo;
+    public double[][] distTo;
     private int[][] edgeTo;
 
     /**
