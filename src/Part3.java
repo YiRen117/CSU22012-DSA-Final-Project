@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 public class Part3 {
-    public static void main(String[] args) {
+    public static void start() {
         SearchByTime timeSearch = new SearchByTime("stop_times.txt");
         Scanner input = new Scanner(System.in);
         boolean exit = false;
+        System.out.println("\nWelcome to the search-by-time service.");
         while(!exit) {
-            System.out.println("Please enter the time (in 'hh:mm:ss' format), or enter 'quit' to exit: ");
+            System.out.println("Please enter the time (in 'hh:mm:ss' format), " +
+                    "or enter 'back' to go back to the previous menu: ");
             if (input.hasNext()) {
                 String time = input.next();
                 String[] inputArray = time.split(":");
@@ -37,7 +39,7 @@ public class Part3 {
                     } else {
                         System.out.println("WARNING: Maximum time allowed is 23:59:59.");
                     }
-                } else if (time.equals("quit")) {
+                } else if (time.equalsIgnoreCase("back")) {
                     exit = true;
                 } else {
                     System.out.println("Incorrect input format!");

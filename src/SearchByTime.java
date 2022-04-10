@@ -41,7 +41,7 @@ public class SearchByTime {
                         stop_headsign.add(dataArray[5].trim());
                         pickup_type.add(dataArray[6].trim());
                         drop_off_type.add(dataArray[7].trim());
-                        shape_dist_traveled.add(dataArray[8].trim());
+                        shape_dist_traveled.add((dataArray.length == 8) ? " " : dataArray[8].trim());
                     }
                 }
                 else{

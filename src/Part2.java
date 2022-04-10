@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 public class Part2 {
-    public static void main(String[] args) {
+    public static void start() {
         SearchByName nameSearch = new SearchByName("stops.txt");
         Scanner input = new Scanner(System.in);
         boolean exit = false;
+        System.out.println("\nWelcome to the search-by-name service.");
         while(!exit) {
-            System.out.println("Please enter the name(in UPPERCASE), or enter 'quit' to exit: ");
+            System.out.println("Please enter the stop name(in UPPERCASE), " +
+                    "or enter 'back' to go back to the previous menu: ");
             if (input.hasNext()) {
                 String name = input.next();
                 nameSearch.search(name);
@@ -27,10 +29,10 @@ public class Part2 {
                     }
                     System.out.println("-----------------------------------------------------------------------------" +
                             "----------------------------------------------------------------------------------------");
-                } else if (name.equals("quit")) {
+                } else if (name.equalsIgnoreCase("back")) {
                     exit = true;
                 } else {
-                    System.out.println("No stops found");
+                    System.out.println("No stops found.");
                 }
             }
         }

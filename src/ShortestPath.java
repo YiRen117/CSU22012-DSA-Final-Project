@@ -175,6 +175,9 @@ public class ShortestPath {
         ArrayList<Integer> indexSeq = new ArrayList<>();
         dijkstraAlgorithm(start);
         int vertex = end;
+        if(edgeTo[start][vertex] == -1){
+            return pathSeq;
+        }
         while (vertex != start) {
             indexSeq.add(vertex);
             vertex = edgeTo[start][vertex];

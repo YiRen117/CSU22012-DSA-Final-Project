@@ -80,16 +80,16 @@ public class SearchByName {
                 if (data != null){
                     String[] dataArray = data.trim().split(",");
                     if(dataArray[0].equals(stop_id)){
-                        id.add(dataArray[0]);
-                        s_code.add(dataArray[1]);
-                        s_name.add(dataArray[2]);
-                        s_desc.add(dataArray[3]);
-                        s_lat.add(dataArray[4]);
-                        s_lon.add(dataArray[5]);
-                        zone.add(dataArray[6]);
-                        s_url.add(dataArray[7]);
-                        loc_type.add(dataArray[8]);
-                        par_station.add((dataArray.length == 9) ? " " : dataArray[9]);
+                        id.add(dataArray[0].trim());
+                        s_code.add(dataArray[1].trim());
+                        s_name.add(dataArray[2].trim());
+                        s_desc.add(dataArray[3].trim());
+                        s_lat.add(dataArray[4].trim());
+                        s_lon.add(dataArray[5].trim());
+                        zone.add(dataArray[6].trim());
+                        s_url.add(dataArray[7].trim());
+                        loc_type.add(dataArray[8].trim());
+                        par_station.add((dataArray.length == 9) ? " " : dataArray[9].trim());
                         endOfFile = true;
                     }
                 }
