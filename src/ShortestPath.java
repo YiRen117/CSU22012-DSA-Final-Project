@@ -7,11 +7,11 @@ import java.util.Map;
 
 public class ShortestPath {
 
-    public Map<String, String> names;
+    private Map<String, String> names;
     public Map<String, Integer> indexes;
-    public Map<Integer, String> stopID;
-    public double[][] distTo;
-    public int[][] edgeTo;
+    private Map<Integer, String> stopID;
+    private double[][] distTo;
+    private int[][] edgeTo;
 
     /**
      * @param trips: A filename containing the details of the trips
