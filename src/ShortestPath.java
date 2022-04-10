@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class ShortestPath {
 
-    private Map<String, String> names;
     public Map<String, Integer> indexes;
     private Map<Integer, String> stopID;
     public double[][] distTo;
@@ -18,7 +17,6 @@ public class ShortestPath {
      * @param transfers: A filename containing the details of the transfers between stops
      */
     ShortestPath(String trips, String transfers, String stops) {
-        this.names = new HashMap<>();
         this.indexes = new HashMap<>();
         this.stopID = new HashMap<>();
         generateStopName(stops);
@@ -48,7 +46,6 @@ public class ShortestPath {
                 String data = stopsBuffer.readLine();
                 if (data != null){
                     String[] dataArray = data.trim().split(",");
-                    names.put(dataArray[0].trim(), dataArray[2].trim());
                     indexes.put(dataArray[0].trim(), index);
                     stopID.put(index, dataArray[0].trim());
                     index++;
