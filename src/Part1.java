@@ -8,7 +8,7 @@ public class Part1 {
         Scanner input = new Scanner(System.in);
         boolean exit = false;
         while(!exit){
-            System.out.println("Please enter the stop_ids (place a ',' between the two ids): ");
+            System.out.println("Please enter the stop_ids (place a ',' between the two ids), or enter 'quit' to exit: ");
             if(input.hasNext()){
                 String stops_id = input.next();
                 String[] inputArray = stops_id.split(",");
