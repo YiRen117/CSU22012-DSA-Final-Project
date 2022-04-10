@@ -9,6 +9,10 @@ public class SearchByTime {
             stop_headsign, pickup_type, drop_off_type, shape_dist_traveled;
 
     SearchByTime(String stop_times){
+        this.filename = stop_times;
+    }
+
+    public void readFile(String inputTime){
         this.trip_id = new ArrayList<>();
         this.arrival_time = new ArrayList<>();
         this.departure_time = new ArrayList<>();
@@ -18,10 +22,7 @@ public class SearchByTime {
         this.pickup_type = new ArrayList<>();
         this.drop_off_type = new ArrayList<>();
         this.shape_dist_traveled = new ArrayList<>();
-        this.filename = stop_times;
-    }
 
-    public void readFile(String inputTime){
         try{
             FileReader fileReader = new FileReader(filename);
             BufferedReader buffer = new BufferedReader(fileReader);
